@@ -58,7 +58,8 @@ def naked_twins(values):
                     # Eliminate the naked twins 
                     if box != box1 and box != box2:
                         for digit in values[box1]:
-                            values[box] = values[box].replace(digit, '')
+                            # values[box] = values[box].replace(digit, '')
+                            assign_value(values, box, values[box].replace(digit, ''))
     
     return values
 
